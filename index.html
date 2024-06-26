@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="foodapp_hero">
+    <div class="foodapp_navbar">
+        <div class="foodapp_navbar_logo">
+            <h2>FoodApp</h2>
+        </div>
+        <div class="foodapp_navbar_links">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="foodapp_hero_content">
+        <h1 id="typedtext"></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nisi ipsum dignissimos et consequatur commodi tempora libero odio soluta illo nam vero molestiae consectetur illum corrupti numquam perferendis veritatis cupiditate.</p>
+        <button>Explore Food Items</button>
+    </div>
+
+   </div>
+    
+
+   <div class="foodapp_about">
+    <h2>About FoodApp</h2>
+
+    <div class="foodapp_about_container">
+        <div class="foodapp_about_img">
+            <img src="about.png" alt="">
+        </div>
+        <div class="foodapp_about_info">
+            <h3>FoodApp</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor omnis tempore debitis nemo asperiores iusto quibusdam. Magni similique nulla veniam earum delectus dignissimos! Similique amet dicta ipsam aliquid libero.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor omnis tempore debitis nemo asperiores iusto quibusdam. Magni similique nulla veniam earum delectus dignissimos! Similique amet dicta ipsam aliquid libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor omnis tempore debitis nemo asperiores iusto quibusdam. Magni similique nulla veniam earum delectus dignissimos! Similique amet dicta ipsam aliquid libero.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+   </div>
+
+
+   <div class="foodapp_dishes">
+    <h2>Food Dishes</h2>
+
+    <div class="foodapp_dishes_container">
+        <div class="fooddish">
+            <img src="./images/img1.jpg" alt="">
+            <div style="padding: 10px;">
+            <h3>Chicken Biryani</h3>
+            <div style="display: flex; justify-content: space-between;">
+                <p>⭐⭐⭐⭐</p>
+                <p>Rs. 220</p>
+            </div>
+            </div>
+            
+        </div>
+
+
+        <div class="fooddish">
+            <img src="./images/img2.jpg" alt="">
+            <div style="padding: 10px;">
+            <h3>Veg Pulaoo</h3>
+            <div style="display: flex; justify-content: space-between;">
+                <p>⭐⭐⭐</p>
+                <p>Rs. 80</p>
+            </div>
+            </div>
+            
+        </div>
+
+
+        <div class="fooddish">
+            <img src="./images/img3.jpg" alt="">
+            <div style="padding: 10px;">
+            <h3>Upma</h3>
+            <div style="display: flex; justify-content: space-between;">
+                <p>⭐⭐</p>
+                <p>Rs. 90</p>
+            </div>
+            </div>
+            
+        </div>
+
+        <div class="fooddish">
+            <img src="./images/img4.jpg" alt="">
+            <div style="padding: 10px;">
+            <h3>Idly</h3>
+            <div style="display: flex; justify-content: space-between;">
+                <p>⭐⭐⭐⭐</p>
+                <p>Rs. 120</p>
+            </div>
+            </div>
+            
+        </div>
+
+        <div class="fooddish">
+            <img src="./images/img5.jpg" alt="">
+            <div style="padding: 10px;">
+            <h3>Paratha</h3>
+            <div style="display: flex; justify-content: space-between;">
+                <p>⭐⭐⭐</p>
+                <p>Rs. 220</p>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+   </div>
+
+
+
+   <script>
+    // set up text to print, each item in array is new line
+var aText = new Array(
+"Welcome to my FoodApp"
+);
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "<span style='color: orange'>_</span>";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();
+
+
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.foodapp_hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("back.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.foodapp_navbar{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #ffffff30;
+}
+
+
+
+.foodapp_navbar_links ul{
+    display: flex;
+}
+
+.foodapp_navbar_links ul li{
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.foodapp_navbar_links ul li:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.foodapp_hero_content{
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+}
+
+.foodapp_hero_content h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.foodapp_hero_content p{
+    width: 60%;
+    margin: auto;
+    color: rgb(196, 196, 196);
+
+}
+
+.foodapp_hero_content button{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.foodapp_hero_content button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.foodapp_about{
+    background-color: #f2f2f2;
+    padding-bottom: 50px;
+}
+
+
+.foodapp_about h2{
+padding: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.foodapp_about_container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.foodapp_about_container .foodapp_about_img{
+    width: 50%;
+}
+
+.foodapp_about_container .foodapp_about_img img{
+    width: 550px;
+    border-radius: 20px;
+}
+
+.foodapp_about_container .foodapp_about_info{
+    padding-left: 50px;
+}
+
+.foodapp_about_container .foodapp_about_info h3{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.foodapp_about_info button{
+    background-color: transparent;
+    border: 2px solid #000;
+    padding: 10px 30px;
+    color: #000;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.foodapp_about_info button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+.foodapp_dishes_container{
+    width: 80%;
+    margin: auto;
+}
+
+.foodapp_dishes h2{
+    margin: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+.fooddish{
+    width: 350px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 25px;
+}
+
+.fooddish img{
+    width: 100%;
+    height: 230px;
+    border-radius: 20px;
+}
+
+.fooddish h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fooddish:hover{
+    transform: translateX(5);
+}
+
